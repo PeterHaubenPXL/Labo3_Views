@@ -6,9 +6,116 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="225">
+            Spacing="50">
 
-            <Label>Hello World!</Label>
+            <Border
+                WidthRequest="150"
+                HeightRequest="150"
+                StrokeShape="Ellipse"
+                StrokeThickness="4"
+                Stroke="Green" 
+                Shadow="DarkGrey 4 4">
+                <Image 
+                    Source="profile_picture.jpg"/>
+            </Border>
+
+            <Border BackgroundColor="Black"
+                    Stroke="Green"
+                    StrokeShape="RoundRectangle 15,0,15,0"
+                    StrokeThickness="5"
+                    HeightRequest="120"
+                    Shadow="DarkGrey 5 5">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
+                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped_AnimateY" />
+                </Border.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Grid.RowSpan="3"
+                        StrokeShape="RoundRectangle 0 15 0 15">
+                        <Image 
+                            Source="profile_picture.jpg" />
+                    </Border>
+
+                    <Label Grid.Column="1" Grid.Row="0"
+                           Text="Name: Peter Hauben"
+                           VerticalOptions="Center"
+                           TextColor="White"
+                           Padding="10" 
+                           FontAttributes="Bold" />
+                    <Label Grid.Column="1" Grid.Row="1"
+                           Text="Age: 54"
+                           VerticalOptions="Center"
+                           TextColor="White"
+                           Padding="10"/>
+                    <Label Grid.Column="1" Grid.Row="2"
+                           Text="Occupation: Developer"
+                           VerticalOptions="Center"
+                           HorizontalOptions="End"
+                           TextColor="White"
+                           Padding="10" />
+                </Grid>
+            </Border>
+            
+            <Border BackgroundColor="Black"
+                    Stroke="Green"
+                    StrokeShape="RoundRectangle 15,0,15,0"
+                    StrokeThickness="5"
+                    HeightRequest="120"
+                    Shadow="DarkGrey 5 5">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped" />
+                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped_AnimateX" />
+                </Border.GestureRecognizers>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Grid.RowSpan="3"
+                        StrokeShape="RoundRectangle 0 15 0 15">
+                        <Image 
+                            Source="profile_picture.jpg" />
+                    </Border>
+
+                    <Label Grid.Column="1" Grid.Row="0"
+                           Text="Name: Peter Hauben"
+                           VerticalOptions="Center"
+                           TextColor="White"
+                           Padding="10" 
+                           FontAttributes="Bold" />
+                    <Label Grid.Column="1" Grid.Row="1"
+                           Text="Age: 54"
+                           VerticalOptions="Center"
+                           TextColor="White"
+                           Padding="10"/>
+                    <Label Grid.Column="1" Grid.Row="2"
+                           Text="Occupation: Developer"
+                           VerticalOptions="Center"
+                           HorizontalOptions="End"
+                           TextColor="White"
+                           Padding="10" />
+                </Grid>
+            </Border>
+
+            
 
         </VerticalStackLayout>
     </ScrollView>
